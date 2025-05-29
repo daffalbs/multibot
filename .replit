@@ -40,4 +40,20 @@ mode = "sequential"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
+args = "pnpm install"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "pnpm run build --filter bot1"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "pnpm run build --filter bot2  "
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "pnpm run build --filter bot3"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
 args = "pnpm start"
