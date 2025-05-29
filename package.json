@@ -11,5 +11,9 @@
     "bots/bot1",
     "bots/bot2",
     "bots/bot3"
-  ]
+  ],
+  "dependencies": {
+    "discord.js": "^14.19.3",
+    "dotenv": "^16.5.0"
+  }
 }
