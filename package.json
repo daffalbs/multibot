@@ -1,13 +1,16 @@
 {
-  "name": "multi-bot-project",
+  "name": "multibot",
   "version": "1.0.0",
-  "type": "module",
+  "private": true,
   "scripts": {
     "start": "concurrently \"pnpm --filter bot1 start\" \"pnpm --filter bot2 start\" \"pnpm --filter bot3 start\""
   },
-  "dependencies": {
-    "concurrently": "^8.2.0",
-    "discord.js": "^14.14.1",
-    "dotenv": "^16.5.0"
-  }
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  },
+  "workspaces": [
+    "bots/bot1",
+    "bots/bot2",
+    "bots/bot3"
+  ]
 }
