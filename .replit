@@ -1,4 +1,6 @@
-entrypoint = "index.js"
+run = "node combined.js"
+language = "nodejs"
+entrypoint = "combined.js"
 modules = ["nodejs-22"]
 hidden = [".config", "package-lock.json"]
 
@@ -10,25 +12,9 @@ channel = "stable-24_11"
 packages = ["imagemagick_light"]
 
 [deployment]
-run = ["sh", "-c", "node index.js"]
+run = ["node", "combined.js"]
 deploymentTarget = "gce"
 ignorePorts = true
-
-[[ports]]
-localPort = 3000
-externalPort = 80
-
-[[ports]]
-localPort = 8080
-externalPort = 8080
-
-[[ports]]
-localPort = 8081
-externalPort = 8081
-
-[[ports]]
-localPort = 8082
-externalPort = 3000
 
 [workflows]
 runButton = "Start Bots"
@@ -40,20 +26,17 @@ mode = "sequential"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "pnpm install"
-
-[[workflows.workflow.tasks]]
-task = "shell.exec"
-args = "pnpm run build --filter bot1"
-
-[[workflows.workflow.tasks]]
-task = "shell.exec"
-args = "pnpm run build --filter bot2  "
-
-[[workflows.workflow.tasks]]
-task = "shell.exec"
-args = "pnpm run build --filter bot3"
-
-[[workflows.workflow.tasks]]
-task = "shell.exec"
 args = "pnpm start"
+
+[[ports]]
+localPort = 8080
+externalPort = 8080
+
+[[ports]]
+localPort = 8081
+externalPort = 80
+
+[[ports]]
+localPort = 8082
+externalPort = 3000
+
