@@ -1,6 +1,7 @@
 {
   "name": "combine-bots",
   "version": "1.0.0",
+  "type": "module",
   "scripts": {
     "start": "concurrently \"pnpm --filter bot1 start\" \"pnpm --filter bot2 start\" \"pnpm --filter bot3 start\""
   },
