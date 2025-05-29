@@ -10,7 +10,7 @@ channel = "stable-24_11"
 packages = ["imagemagick_light"]
 
 [deployment]
-run = ["sh", "-c", "pnpm start"]
+run = ["sh", "-c", "node index.js"]
 deploymentTarget = "gce"
 ignorePorts = true
 
