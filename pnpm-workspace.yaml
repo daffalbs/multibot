@@ -1,4 +1,4 @@
 packages:
-- 'bot1'
-- 'bot2'
-- 'bot3'
+- 'bots/bot1'
+- 'bots/bot2'
+- 'bots/bot3'

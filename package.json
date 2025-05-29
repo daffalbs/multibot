@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "start": "concurrently \"node bots/bot1/index.js\" \"node bots/bot2/index.js\" \"node bots/bot3/index.js\""
+    "start": "concurrently \"pnpm --filter bot1 start\" \"pnpm --filter bot2 start\" \"pnpm --filter bot3 start\""
   },
   "dependencies": {
     "concurrently": "^8.2.0",
