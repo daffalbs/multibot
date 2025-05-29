@@ -10,10 +10,22 @@ channel = "stable-24_11"
 packages = ["imagemagick_light"]
 
 [deployment]
-run = ["node", "index.js"]
-deploymentTarget = "autoscale"
-ignorePorts = false
+run = ["sh", "-c", "pnpm start"]
+deploymentTarget = "gce"
+ignorePorts = true
 
 [[ports]]
 localPort = 3000
 externalPort = 80
+
+[[ports]]
+localPort = 8080
+externalPort = 8080
+
+[[ports]]
+localPort = 8081
+externalPort = 8081
+
+[[ports]]
+localPort = 8082
+externalPort = 3000

@@ -7,6 +7,13 @@ settings:
 importers:
 
   .:
+    dependencies:
+      discord.js:
+        specifier: ^14.17.3
+        version: 14.19.3
+      dotenv:
+        specifier: ^16.5.0
+        version: 16.5.0
     devDependencies:
       concurrently:
         specifier: ^8.2.0
@@ -21,7 +28,7 @@ importers:
         specifier: ^1.8.0
         version: 1.8.0
       discord.js:
-        specifier: ^14.17.3
+        specifier: ^14.19.3
         version: 14.19.3
       dotenv:
         specifier: ^16.5.0
@@ -79,7 +86,7 @@ importers:
         specifier: ^1.8.0
         version: 1.8.0
       discord.js:
-        specifier: ^14.17.3
+        specifier: ^14.19.3
         version: 14.19.3
       dotenv:
         specifier: ^16.5.0
@@ -137,7 +144,7 @@ importers:
         specifier: ^1.8.0
         version: 1.8.0
       discord.js:
-        specifier: ^14.17.3
+        specifier: ^14.19.3
         version: 14.19.3
       dotenv:
         specifier: ^16.5.0
